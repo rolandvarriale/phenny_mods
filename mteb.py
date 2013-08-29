@@ -1,4 +1,10 @@
 #!@/usr/bin/python
+"""
+simple mods for the phenny irc bot to display ascii art, get fortunes, etc
+"""
+
+__author__ = "voytek@trustdatkness.com"
+
 import pickle 
 import random
 import os
@@ -6,10 +12,25 @@ HOME = os.path.expanduser("~")
 MTEB = os.path.join(HOME, ".phenny/modules/mteb")
 
 def read_config(name):
+  """
+  Read pickled config data.
+
+  Args: 
+    name - a string generally corresponding to the phenny command
+
+  Returns:
+    the unpickled object.  Usually a list
+  """
   with open(os.path.join(MTEB, name), "rb") as f:
     return pickle.load(f)
 
 def write_config(obj, name):
+  """
+  Writes an object to disc in the MTEB defined path with the given name.
+
+  Args: 
+    name - a string generally corresponding to the phenny command
+  """
   with open(os.path.join(MTEB, name), "wb") as f:
     pickle.dump(obj, f)
 
