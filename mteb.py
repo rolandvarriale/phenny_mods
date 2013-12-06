@@ -64,6 +64,19 @@ def mteb(phenny, input):
 mteb.commands = ['mteb']
 mteb.priority = 'medium'
 
+def roland(phenny, input):
+  phenny.say("    _,,,,_ ")
+  phenny.say("          ,########, ")
+  phenny.say("         ,##`    `##,")
+  phenny.say("         ## ##  ## ##")
+  phenny.say("         /# (.)(.) #\\ ")
+  phenny.say("         \#   _)   #/")
+  phenny.say("          #,######,#")
+  phenny.say("          ##, ~~ ,##")
+  phenny.say("          '########'")
+  phenny.say("           `######`")
+roland.commands = ['roland']
+
 def danger(phenny, input):
   phenny.say(" _( )                 ( )_")
   phenny.say("(_, |      __ __      | ,_)")
